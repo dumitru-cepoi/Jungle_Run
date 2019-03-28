@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="CityEngine401">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/CityEngine40" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/CityEngine40/javadoc" />
+    </JAVADOC>
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Downloads/CityEngine40" recursive="false" />
+  </library>
+</component>
