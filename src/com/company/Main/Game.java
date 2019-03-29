@@ -248,14 +248,14 @@ public class Game {
         world.addStepListener(new WaspTracker(view, world.getWasp(), world.getPlayer()));
 
         //Enemy Trackers
-        world.addStepListener(new SlimeTracker(view, world.getPlayer(), Level2.getSlime(), 51, 60));
+        world.addStepListener(new SlimeTracker(view, world.getPlayer(), Level2.getSlime(), 50, 60));
         world.addStepListener(new SlimeTracker(view, world.getPlayer(), Level2.getSlime2(), 136, 150));
         world.addStepListener(new EyeTracker(view, Level2.getEye(), 4, -4, -15, 6));
         world.addStepListener(new EyeTracker(view, Level2.getEye2(), 3, -3, 71, 87));
         world.addStepListener(new EyeTracker(view, Level2.getEye3(), 6, -6, 130, 150));
 
         //Enemy Attacks
-        slimeAttack = new SlimeAttack(view, Level2.getSlime(), world.getPlayer(), 44, 60);
+        slimeAttack = new SlimeAttack(view, Level2.getSlime(), world.getPlayer(), 43, 60);
         slimeAttack2 = new SlimeAttack(view, Level2.getSlime2(), world.getPlayer(), 130, 150);
         ea = new EyeAttack(view, Level2.getEye(), world.getPlayer(), -16, 6, 2000);
         ea1 = new EyeAttack(view, Level2.getEye2(), world.getPlayer(), 67, 87, 2000);

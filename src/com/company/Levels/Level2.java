@@ -26,7 +26,7 @@ import java.io.IOException;
  */
 public class Level2 extends GameLevel {
 
-    private static final int NUM_COINS = 70;
+    private static final int NUM_COINS = 50;
     private Wasp wasp;
     private static Slime slime;
     private static Slime slime2;
@@ -157,7 +157,7 @@ public class Level2 extends GameLevel {
 
         //Slime
         slime = new Slime(this, getPlayer(), 50, 6.5f);
-        slime2 = new Slime(this, getPlayer(), 136, -5f);
+        slime2 = new Slime(this, getPlayer(), 150, -5f);
 
 
         //COLLECTIBLES

@@ -23,7 +23,7 @@ public class MainWalker extends Walker {
         addImage(idleImage);
         this.setGravityScale(3.5f);
         this.game = game;
-        coinCount = 160;
+        coinCount = 0;
         healthPoints = 6;
     }
 
@@ -97,6 +97,10 @@ public class MainWalker extends Walker {
 
     public static boolean isGameOver() {
         return gameOver;
+    }
+
+    public static void setGameOver(boolean gameOver) {
+        MainWalker.gameOver = gameOver;
     }
 
     public static void gameOverFalse() {

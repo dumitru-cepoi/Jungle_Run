@@ -2,6 +2,7 @@ package com.company.Panels;
 
 import city.cs.engine.SoundClip;
 import com.company.Main.Game;
+import com.company.Walkers.MainWalker;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -24,6 +25,7 @@ public class GameOver extends JPanel {
     private JButton restartButton;
     private JLabel scoreLabel;
     private JButton quitButton;
+    private JButton menuButton;
 
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, 800, 550, null);
@@ -62,10 +64,20 @@ public class GameOver extends JPanel {
             }
         });
 
+        menuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameMusic.stop();
+                MainWalker.setGameOver(false);
+                game.getFrame().dispose();
+                new Game();
+            }
+        });
+
         if (MainMenu.getTextFromField().equals("Enter Name") || MainMenu.getTextFromField().equals("")) {
-            scoreLabel.setText("Your score is: " + game.getLastScore());
+            scoreLabel.setText("Your score is: " + MainWalker.getSaveScore());
         } else {
-            scoreLabel.setText(MainMenu.getTextFromField() + ", your score is: " + game.getLastScore());
+            scoreLabel.setText(MainMenu.getTextFromField() + ", your score is: " + MainWalker.getSaveScore());
         }
 
         //Change the font of the buttons
@@ -73,6 +85,7 @@ public class GameOver extends JPanel {
             Font myFont = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(new File("data/1980XX.ttf"))).deriveFont(Font.PLAIN, 30);
             restartButton.setFont(myFont);
             quitButton.setFont(myFont);
+            menuButton.setFont(myFont);
         } catch (Exception e) {
             e.printStackTrace();
         }

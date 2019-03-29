@@ -246,7 +246,6 @@ public class Level1 extends GameLevel {
         BodyImage powerupImage = new BodyImage("data/Images/lightning-bolt.png", 1.4f);
         GhostlyImage powerup = new GhostlyImage(this, 0.7f, 0.7f, 34f, 1.5f, powerupImage);
 
-
         //ENEMIES
 
         //Eye

@@ -23,6 +23,7 @@ public class TheEnd extends JPanel{
     private JLabel congratsLabel;
     private JLabel scoreLabel;
     private JButton quitButton;
+    private JButton menuButton;
 
     public void paintComponent(Graphics g) {
         g.drawImage(img, 0, 0, 800, 550, null);
@@ -51,6 +52,14 @@ public class TheEnd extends JPanel{
                 System.exit(0);
             }
         });
+        menuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                gameMusic.stop();
+                game.getFrame().dispose();
+                new Game();
+            }
+        });
 
         if (MainMenu.getTextFromField().equals("Enter Name") || MainMenu.getTextFromField().equals("")) {
             scoreLabel.setText("Your score is: " + game.getLastScore());
@@ -62,6 +71,7 @@ public class TheEnd extends JPanel{
         try {
             Font myFont = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(new File("data/1980XX.ttf"))).deriveFont(Font.PLAIN, 30);
             quitButton.setFont(myFont);
+            menuButton.setFont(myFont);
         } catch (Exception e) {
             e.printStackTrace();
         }

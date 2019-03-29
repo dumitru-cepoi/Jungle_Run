@@ -24,7 +24,7 @@ import java.io.IOException;
 
 public class Level4 extends GameLevel {
 
-    private static final int NUM_COINS = 150;
+    private static final int NUM_COINS = 50;
     private Wasp wasp;
     private DeathPlatform deathPlatform;
     private static PowerUp powerUp;

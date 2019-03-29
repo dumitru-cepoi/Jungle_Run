@@ -27,7 +27,7 @@ import java.io.IOException;
  */
 public class Level3 extends GameLevel {
 
-    private static final int NUM_COINS = 120;
+    private static final int NUM_COINS = 50;
     private Wasp wasp;
     private DeathPlatform deathPlatform;
     private static Yeti yeti;
